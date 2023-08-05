@@ -13,7 +13,7 @@
   
 ## App on Production
 
-[will update soon]
+https://checklist-site.netlify.app/
 
 ## Run Locally
 
