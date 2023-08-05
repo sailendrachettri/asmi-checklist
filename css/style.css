@@ -81,6 +81,18 @@
     margin-left: 10px;
 }
 
+.todo-app .quote {
+    margin: 0 4rem 0;
+    min-height: 8vh;
+    z-index: 100;
+}
+
+
+#date {
+    display: flex;
+    justify-content: end;
+}
+
 .row {
     display: flex;
     align-items: center;
@@ -89,6 +101,7 @@
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 input {
@@ -136,7 +149,6 @@ ul li::before {
 ul li.checked {
     color: #555;
     text-decoration: line-through;
-
 }
 
 ul li.checked::before {
