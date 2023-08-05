@@ -1,13 +1,13 @@
 
 # Checklist - Plan you day
 
-- The checklist application will help you to organized you day.
+- The checklist application will help you to organized your day.
 
 ## Tech Stack
 
 **Design:** CSS
 
-**API:** api-ninjas
+**API:** api-ninjas & rapidapi.com
 
 **Language:** Javascript
   
