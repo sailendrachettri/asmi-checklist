@@ -27,4 +27,4 @@ function changeFact() {
 
 }
 changeFact();
-setInterval(changeFact, 7000);
+setInterval(changeFact, 15000);
