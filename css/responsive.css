@@ -1,0 +1,21 @@
+@media only screen and (max-width: 400px) {
+    ul li {
+        font-size: 14px;
+    }
+
+    .todo-app .quote {
+        margin: 0.6rem;
+    }
+
+    .todo-app {
+        padding: 40px 5px 66px;
+    }
+
+    .row {
+        padding-left: 0;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+}
