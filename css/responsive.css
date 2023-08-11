@@ -8,7 +8,11 @@
     }
 
     .todo-app {
-        padding: 40px 5px 66px;
+        padding: 40px 1.5rem 66px;
+    }
+
+    input {
+        width: 50%;
     }
 
     .row {
@@ -16,6 +20,6 @@
     }
 
     button {
-        padding: 8px 15px;
+        padding: 8px 2rem;
     }
 }
