@@ -5,22 +5,26 @@ const options = {
 const displayQuote = document.getElementById('displayQuote')
 const defaultQuote = "The way to get started is to quit talking and begin doing."
 
+
 function changeFact() {
+    let length = 1827;
+    let quoteNumber = Math.floor(Math.random() * length);
+
 
     fetch('js/db.json', options)
         .then(response => response.json())
         .then((response) => {
-            let quote = response[1].fact
+            let quote = response[quoteNumber]
 
             if (quote.length > 90) {
                 displayQuote.innerHTML = defaultQuote
             }
             else {
-                displayQuote.innerHTML = quote
+                displayQuote.innerHTML = quote[quoteNumber]
             }
         })
         .catch(err => console.error(err));
 
 }
 changeFact();
-setInterval(changeFact, 12000);
+setInterval(changeFact, 10000);
