@@ -1,9 +1,5 @@
 const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': 'c78fb667a3msh7d7e2fb02212684p19c0a3jsn6c1847f46e85',
-        'X-RapidAPI-Host': 'facts-by-api-ninjas.p.rapidapi.com'
-    }
+    method: 'GET'
 };
 
 const displayQuote = document.getElementById('displayQuote')
@@ -11,10 +7,10 @@ const defaultQuote = "The way to get started is to quit talking and begin doing.
 
 function changeFact() {
 
-    fetch('https://facts-by-api-ninjas.p.rapidapi.com/v1/facts', options)
+    fetch('js/db.json', options)
         .then(response => response.json())
         .then((response) => {
-            let quote = response[0].fact
+            let quote = response[1].fact
 
             if (quote.length > 90) {
                 displayQuote.innerHTML = defaultQuote
@@ -27,4 +23,4 @@ function changeFact() {
 
 }
 changeFact();
-setInterval(changeFact, 15000);
+setInterval(changeFact, 12000);
