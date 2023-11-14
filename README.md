@@ -13,7 +13,7 @@
   
 ## App on Production
 
-https://checklist-site.netlify.app/
+https://asmi-checklist.netlify.app/
 
 ## Run Locally
 
