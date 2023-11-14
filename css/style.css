@@ -50,10 +50,12 @@
 #date {
     display: flex;
     justify-content: end;
+    font-size: 1.2rem;
 }
 
 #countTask {
     padding: 1rem 0 0 0;
+    font-size: 1.1rem;
 }
 
 .row {
