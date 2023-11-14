@@ -5,57 +5,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --purple-color: #7b7ac5;
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
     padding: 10px;
-    background: linear-gradient(270deg, #605b86, #837cbd, #9a93da);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
+    background-color: var(--purple-color);
 }
 
 .todo-app {
@@ -65,11 +23,11 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-    color: #837cbd;
+    color: var(--purple-color);
 }
 
 .todo-app h2 {
-    color: #837cbd;
+    color: var(--purple-color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -79,7 +37,7 @@
     width: 40px;
     border-radius: 50%;
     margin-left: 10px;
-
+    cursor: pointer;
 }
 
 .todo-app .quote {
@@ -92,6 +50,10 @@
 #date {
     display: flex;
     justify-content: end;
+}
+
+#countTask {
+    padding: 1rem 0 0 0;
 }
 
 .row {
@@ -118,7 +80,7 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #837cbd;
+    background: #7b7ac5;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -148,7 +110,7 @@ ul li::before {
 }
 
 ul li.checked {
-    color: #837cbd;
+    color: #555;
     text-decoration: line-through;
 }
 
@@ -163,7 +125,7 @@ ul li span {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #837cbd;
+    color: #555;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;

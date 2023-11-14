@@ -17,9 +17,14 @@
     <div class="container">
         <div class="todo-app">
             <div id="date">
-                <small>Date: <span id="dateAndTime"></span></small>
+                <small><span id="dateAndTime"></span></small>
             </div>
-            <h2>Plan your day Asmi<img src="/images/favicon_io/android-chrome-512x512.png" alt="Icon"></h2>
+
+            <div id="countTask">
+                <p id="allWorkDoneInfo"> <span id="complectedTask">0</span> of <span id="totalTask">0</span> complected
+                </p>
+            </div>
+            <h2>Plan your day Asmi<img src="./images/asmi.jpg" alt="Icon" onclick="resetImageBtn()"></h2>
             <p class="quote" id="displayQuote"></p>
 
             <div class="row">
@@ -31,7 +36,6 @@
         </div>
     </div>
     <script src="/js/script.js"></script>
-    <!-- <script type="module" src="/js/factData2.js"></script> -->
     <script src="/js/factData.js"></script>
     <script src="/js/Date.js"></script>
 </body>

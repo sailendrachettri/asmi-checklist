@@ -1,29 +1,30 @@
 let dateAndTime = document.getElementById('dateAndTime')
-const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-];
 
-function displayDateAndTime() {
-    // Get the current date and time
-    const date = new Date();
-    let day = date.getDate()
+function getFormattedDateTime() {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
 
-    if (day == 1) {
-        day = date.getDate() + '<sup>st</sup>'
-    } else if (day == 2) {
-        day = date.getDate() + '<sup>nd</sup>'
+    const now = new Date();
+    const dayOfWeek = daysOfWeek[now.getDay()];
+    const dayOfMonth = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
 
-    } else if (day == 3) {
-        day = date.getDate() + '<sup>rd</sup>'
-
-    } else {
-        day = date.getDate() + '<sup>th</sup>'
-
+    // Function to get the correct ordinal suffix for the day of the month
+    function getOrdinalSuffix(day) {
+        if (day > 3 && day < 21) return 'th';
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
     }
-    const month = months[date.getMonth()];
-    const year = date.getFullYear()
 
-    dateAndTime.innerHTML = day + " " + month + " " + year;
+    const ordinalSuffix = getOrdinalSuffix(dayOfMonth);
+    dateAndTime.innerText = dayOfWeek + ", " + dayOfMonth + ordinalSuffix + " " + month + " " + year
 }
-displayDateAndTime()
+getFormattedDateTime();
+
